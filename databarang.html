@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>DATA MARKET NASIMA</title>
+</head>
+<style>
+    html, body {
+        overflow: hidden;
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+        background-color: rgb(188, 195, 191);
+    }
+
+    .form-group {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        text-align: left;
+    }
+
+    pre {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Normal styles for label */
+label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+    input {
+        width: 300px;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #55b75b;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #ffffff;
+        color: white;
+    }
+
+  select{
+    width: 300px;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    
+
+  }
+
+        
+    
+
+</style>
+<body>
+
+
+       <center> <h2>DATA BARANG</h2></center>
+
+        <div class="form-group">
+            <form name="form">
+                <pre>
+                    <label for="kode">KODE BARANG</label>: <input type="text" name="kode">
+                    <label for="nama">NAMA BARANG</label>: <input type="text" name="nama">
+                    <label for="harga">HARGA BARANG</label>: <input type="text" name="harga">
+                    <label for="satuan">SATUAN</label>: <select name="satuan">
+                            <option value="kg">Kilogram (kg)</option>
+                             <option value="g">Gram (g)</option>
+                            <option value="pcs">Pieces (pcs)</option>
+                          </select>
+                    
+                </pre>
+                <button id="process">PROSES</button>
+            </form>
+            <div class="table-container">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <td>KODE BARANG</td> 
+                            <td>NAMA BARANG</td>
+                            <td>HARGA BARANG</td>
+                            <td>SATUAN</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.forms["form"];
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                
+                var kode = form.elements["kode"].value;
+                var nama = form.elements["nama"].value;
+                var harga = form.elements["harga"].value;
+                var satuan = form.elements["satuan"].value;
+
+
+                
+                addRowToTable(kode, nama, harga, satuan, satuan);
+
+                
+                form.reset();
+            });
+
+            function addRowToTable(kode, nama, harga, satuan, satuan) {
+
+                var tbody = document.querySelector("tbody");
+
+
+                var newRow = document.createElement("tr");
+                newRow.innerHTML = "<td>" + kode + "</td><td>" + nama + "</td><td>" + harga + "</td><td>" + satuan + "</td>";
+
+                tbody.appendChild(newRow);
+            }
+        });
+    </script>  
+</body>
+</html>

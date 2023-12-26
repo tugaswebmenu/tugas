@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Ini adalah file content halaman web</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            overflow-x: auto; /* Membuat halaman dapat di-scroll secara horizontal */
+        }
+        
+
+        p {
+            font-size: 18px;
+            text-align: center;
+            color: brown;
+        }
+        h1{
+         font-size: 23px;
+        }
+
+        .product-container {
+            display: flex; /* Menggunakan flexbox untuk mengelompokkan elemen */
+            white-space: nowrap; /* Mencegah wrapping pada elemen */
+        }
+
+        .product {
+            margin-right: 20px; /* Memberikan ruang antara produk */
+        }
+
+        img {
+            max-width: 100%; /* Membuat gambar responsif */
+            height: auto;
+        }
+        marquee {
+         background-color: #4b498b;
+            font-size: 28px;
+            color: #ffffff; /* Warna teks */
+            padding: 20px; /* Ruang di sekitar teks dalam marquee */
+            border: 1px solid #000102; /* Border marquee */
+            width: 100%; /* Lebar marquee */
+        }
+
+    </style>
+</head>
+<body>
+   <marquee behavior="scroll" direction="left">
+      <p1>Selamat datang di website penjualan barang kami</p1>
+  </marquee>
+    <h1>Berikut barang yang dijual di toko kami</h1>
+
+    <!-- Menggunakan div dengan class product-container untuk mengelompokkan produk -->
+    <div class="product-container">
+        <div class="product">
+            <img src="13.png" alt="Deskripsi gambar">
+            <p>Latop MSI</p>
+            <p>Harga: 100000</p>
+        </div>
+
+        <div class="product">
+            <img src="acer.png" alt="Deskripsi gambar">
+            <p>Latop ACER</p>
+            <p>Harga: 200000</p>
+        </div>
+        <div class="product">
+         <img src="13.png" alt="Deskripsi gambar">
+         <p>Latop MSI</p>
+         <p>Harga: 100000</p>
+     </div>
+            <div class="product">
+         <img src="acer.png" alt="Deskripsi gambar">
+         <p>Latop ACER</p>
+         <p>Harga: 200000</p>
+     </div>
+
+    </div>
+
+</body>
+</html>
